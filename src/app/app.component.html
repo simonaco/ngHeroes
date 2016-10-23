@@ -2,5 +2,22 @@
   <md-sidenav>Sidenav</md-sidenav>
   <div class="app-content">
     <md-toolbar class="md-primary">Who's your ngHero?</md-toolbar>
+    <md-grid-list cols=2>
+      <md-grid-tile *ngFor="let hero of heroes | async" >
+          <md-grid-tile-header>
+            {{hero.name}} @ {{hero.rating}}
+          </md-grid-tile-header>
+          <img [src]=hero.imageUrl/>
+          <md-grid-tile-footer>
+            <h5>{{hero.description}}</h5>
+            <button class="md-line" md-icon-button>
+              <md-icon class="md-24">thumb_up</md-icon>
+            </button>
+            <button class="md-line" md-icon-button>
+              <md-icon class="md-24">thumb_down</md-icon>
+            </button>
+          </md-grid-tile-footer>
+      </md-grid-tile>
+    </md-grid-list>
   </div>
 </md-sidenav-layout>
