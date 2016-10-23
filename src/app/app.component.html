@@ -10,10 +10,10 @@
           <img [src]=hero.imageUrl/>
           <md-grid-tile-footer>
             <h5>{{hero.description}}</h5>
-            <button class="md-line" md-icon-button>
+            <button (click)="voteUp(hero)" class="md-line" md-icon-button>
               <md-icon class="md-24">thumb_up</md-icon>
             </button>
-            <button class="md-line" md-icon-button>
+            <button (click)="voteDown(hero)" class="md-line" md-icon-button>
               <md-icon class="md-24">thumb_down</md-icon>
             </button>
           </md-grid-tile-footer>

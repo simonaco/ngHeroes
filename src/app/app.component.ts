@@ -11,4 +11,12 @@ export class AppComponent {
   constructor(af:AngularFire){
     this.heroes = af.database.list("/heroes");
   }
+
+  voteUp(hero):void {
+    this.heroes.update(hero, {rating:hero.rating+1});
+  }
+
+  voteDown(hero):void {
+    this.heroes.update(hero, {rating:hero.rating-1});
+  }
 }
