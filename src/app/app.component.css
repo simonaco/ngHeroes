@@ -1,3 +1,11 @@
 .app-content {
     padding: 20px;
 }
+.hero {
+    max-width: 50%;
+    margin:10px auto 10px auto;
+}
+.hero-pic {
+    height: 207px;
+    width:207px;
+}
